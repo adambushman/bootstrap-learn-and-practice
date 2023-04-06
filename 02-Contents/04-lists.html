@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing Layouts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <p>By default</p>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <hr>
+
+    <p>Unstyled class</p>
+    <ul class="list-unstyled">
+        <li>One</li>
+        <li>Two
+            <ul class="list-unstyled">
+                <li>Stuff 2</li>
+                <li>Stuff 2</li>
+            </ul>
+        </li>
+        <li>Three
+            <ul>
+                <li>Stuff 2</li>
+                <li>Stuff 2</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <p>Inline class</p>
+    <ul class="list-inline">
+        <li class="list-inline-item">One.</li>
+        <li class="list-inline-item">Two.</li>
+        <li class="list-inline-item">Three.</li>
+    </ul>
+
+    <hr>
+
+    <p>Description lists by default</p>
+    <dl>
+        <dt>First description</dt>
+        <dd>Here's a bunch of data</dd>
+        <dt>second description</dt>
+        <dd>Here's a bunch of data</dd>
+        <dt>Third description</dt>
+        <dd>Here's a bunch of data</dd>
+    </dl>
+
+    <hr>
+
+    <p>Description lists with classes</p>
+    <dl class="container">
+        <div class="row">
+            <dt class="col-md-3">First description</dt>
+            <dd class="col-md-9">Lorem ipsum dolor sit amet.</dd>
+            <dt class="col-md-3">second description</dt>
+            <dd class="col-md-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, qui?</dd>
+            <dt class="col-md-3 text-truncate">Third description that's really quite long and we don't want to wrap</dt>
+            <dd class="col-md-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, autem ab eum adipisci itaque iusto tempore laborum nam odit non ex suscipit nobis sequi? Quisquam libero provident dignissimos eaque alias.</dd>
+        </div>
+
+    </dl>
+
+    <script> src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"</script>
+    <sript src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></sript>
+</body>
+</html>
