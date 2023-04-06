@@ -16,8 +16,10 @@
 <body>
     <h1>Hello World!</h1>
 
-    <div class="container bg-info mt-5">
-        <!-- The extra blue is the container background; overflow-->
+    <!-- We can also put in overflow-hidden -->
+    <div class="container bg-info mt-5 overflow-hidden">
+        <!-- The extra blue is the container background -->
+        <!-- If we add some gutter with gx-5, there's some overflow-->
         <div class="row mb-3 bg-warning h-10 gx-5">
             <div class="col mb-3">
                 <div class="bg-primary p-3 text-white">
@@ -30,7 +32,47 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-3 bg-warning h-10">
+        <!-- Vertical gutters with gy-5 too -->
+        <div class="row mb-3 bg-warning h-10 gy-5">
+            <div class="col">
+                <div class="bg-secondary p-3 text-white">
+                    Columns
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-secondary p-3 text-white">
+                    Columns
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3 bg-warning h-10 g-2">
+            <div class="col">
+                <div class="bg-secondary p-3 text-white">
+                    Columns
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-secondary p-3 text-white">
+                    Columns
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- We can set the gutters for different breakpoints too -->
+    <div class="container bg-info mt-5">
+        <div class="row mb-3 bg-warning h-10 g-md-5 g-sm-3">
+            <div class="col mb-3">
+                <div class="bg-primary p-3 text-white">
+                    Columns
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-primary p-3 text-white">
+                    Columns
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3 bg-warning h-10 g-md-5 g-sm-3">
             <div class="col">
                 <div class="bg-secondary p-3 text-white">
                     Columns
