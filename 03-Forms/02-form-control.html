@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing Layouts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- We can use some of this standard form styling on any text based input -->
+
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="">
+            <!-- Text input form fields -->
+            <div class="mb-3">
+              <label for="u_name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="u_name">
+            </div>
+            <div class="mb-3">
+              <label for="u_comment" class="form-label">Comment</label>
+              <textarea class="form-control" id="u_comment" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="u_comment" class="form-label">Smaller input</label>
+              <input type="text" class="form-control form-control-sm" id="u_comment">
+            </div>
+            <div class="mb-3">
+              <label for="u_comment" class="form-label">Larger input</label>
+              <input type="text" class="form-control form-control-lg" id="u_comment">
+            </div>
+            <div class="mb-3">
+              <label for="u_email" class="form-label">Email</label>
+              <input type="text" class="form-control" id="u_email" value="johndoe@me.com" disabled>
+            </div>
+            <!-- File upload form fields -->
+            <div class="mb-3">
+              <label for="u_file" class="form-label">File Upload</label>
+              <input type="file" class="form-control" id="u_file">
+            </div>
+            <!-- Color form fields -->
+            <div class="mb-3">
+              <label for="u_color" class="form-label">Choose a Color</label>
+              <input type="color" class="form-control form-control-color" id="u_color">
+            </div>
+            <!-- List form fields -->
+            <div class="mb-3">
+              <label for="datalist" class="form-label">Choose an option</label>
+              <input list="datalistOptions" class="form-control" id="datalist" placeholder="Type to search">
+              <datalist id="datalistOptions">
+                <option value="San Francisco"></option>
+                <option value="New York"></option>
+                <option value="Los Angeles"></option>
+                <option value="Chicago"></option>
+              </datalist>
+            </div>
+            <div class="mb-3">
+              <label for="countries" class="form-label">Country</label>
+              <select name="" id="counties" class="form-control">
+                <option value="San Francisco" selected>San Francisco</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="countries" class="form-label">Country</label>
+              <select name="" id="counties" class="form-control" multiple>
+                <option value="San Francisco" selected>San Francisco</option>
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+        
+    <script> src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"</script>
+    <sript src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></sript>
+</body>
+</html>
