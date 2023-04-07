@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practicing Layouts</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form action="">
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text">Username</span>
+              <input type="text" class="form-control" placeholder="John Doe">
+            </div>
+          </div>
+          <div class="mb-3">
+              <!-- Put on the other side -->
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="John Doe">
+                <span class="input-group-text">Username</span>
+              </div>
+          </div>
+          <div class="mb-3">
+            <!-- Put on both sides -->
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control text-end" placeholder="2,000">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- Put in between -->
+            <div class="input-group">
+              <input type="text" class="form-control text-end" placeholder="myname">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control text-start" placeholder="gmail.com">
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- With radio buttons and checkboxes -->
+            <div class="input-group">
+              <span class="input-group-text">
+                <input type="checkbox" class="form-check-input mt-0">
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- Two inputs -->
+            <div class="input-group">
+              <span class="input-group-text">Name</span>
+              <input type="text" class="form-control" placeholder="First">
+              <input type="text" class="form-control" placeholder="Last">
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- Two  text groups -->
+            <div class="input-group">
+              <span class="input-group-text">Donation</span>
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control text-end" placeholder="5,000">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- With buttons -->
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- Dropdown button -->
+            <!-- Not working for some reason -->
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Submit</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">One</a></li>
+                <li><a class="dropdown-item" href="#">Two</a></li>
+                <li><a class="dropdown-item" href="#">Three</a></li>
+                <li><a class="dropdown-item" href="#">Four</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mb-3">
+            <!-- File upload -->
+            <div class="input-group">
+              <label for="choose_file" class="input-group-text">Upload Profile Pic</label>
+              <input type="text" class="form-control" id="choose_file" placeholder="Choose File">
+              <button type="submit" class="btn btn-success">Upload</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+      
+  <script> src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"</script>
+  <sript src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></sript>
+</body>
+</html>
