@@ -10,43 +10,7 @@
 </head>
 <body>
 
-  <!-- As a link -->
-
-  <nav class="navbar bg-dark">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand text-light">
-        Brand Name
-      </a>
-    </div>
-  </nav>
-
-  <!-- As a heading -->
-
-  <nav class="navbar bg-dark mt-3">
-    <div class="container-fluid">
-      <span class="navbar-brand h1 text-light">Brand Name</span>
-    </div>
-  </nav>
-
-  <!-- As an image -->
-
-  <nav class="navbar bg-dark mt-3">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand">
-        <img style="width:45px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="">
-      </a>
-    </div>
-  </nav>
-
-  <!-- Expandable -->
-
-  <div class="container mt-3">
-    <div class="row">
-      <h5>Expandable</h5>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg mt-3">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <div class="container-fluid">
       <a href="#" class="navbar-brand">
         <img style="width:45px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="">
@@ -80,6 +44,23 @@
               <li><a href="#" class="dropdown-item">Hi</a></li>
               <li><a href="#" class="dropdown-item">Hello</a></li>
               <li><a href="#" class="dropdown-item">Howdy</a></li>
+              <li class="dropdown dropend">
+                <a 
+                  href="#"
+                  class="dropdown-item dropdown-toggle"  
+                  id="navbar-dropdown-list-L1"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >Nested Dropdown</a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
+                  aria-labeledby="navbar-dropdown-list-L1"
+                >
+                  <li><a href="#" class="dropdown-item">Hola</a></li>
+                  <li><a href="#" class="dropdown-item">Buenas</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
