@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practicing Components</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <style>
+    .new-tip {
+      --bs-tooltip-bg: orange;
+    }
+    .light-tip {
+      --bs-tooltip-bg: lightgray;
+      --bs-tooltip-color: black;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container mt-3">
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-10">
+        <p>
+          <a href="#" data-bs-toggle="tooltip" title="This is a tooltip">Basic tooltip</a>
+        </p>
+        <p>
+          <a 
+            href="#" 
+            data-bs-toggle="tooltip" 
+            data-bs-custom-class="new-tip"
+            title="This is a custom tooltip"
+          >Custom tooltip</a>
+        </p>
+        <button 
+          type="button" 
+          class="btn btn-primary"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          title="Tooltip on bottom"
+        >Button Tooltip</button>
+        <button 
+          type="button" 
+          class="btn btn-primary"
+          data-bs-toggle="tooltip"
+          data-bs-custom-class="light-tip"
+          data-bs-placement="bottom"
+          data-bs-html="true"
+          title="
+            <div class='row text-start'>
+              <div class='col-5'>
+                <img class='img-fluid' src='https://a.espncdn.com/combiner/i?img=/i/headshots/mens-college-basketball/players/full/4433627.png'>
+              </div>
+              <div class='col-7 text-start'>
+                <p><strong>Keyonte George</strong></p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-12'>
+                <p>33 pts, 4 reb, 10 ast</p>
+              </div>
+            </div>
+          "
+      >Tooltip w/ HTML</button>
+      </div>
+    </div>
+  </div>
+      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Activate ToolTips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(
+      tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+  </script>
+</body>
+</html>
