@@ -1,3 +1,5 @@
+![Bootstrap Banner](./bootstrap-banner.png)
+
 # Bootstrap Learn and Practice
 
 A series of HTML files for learning and practicing implementation of the Bootstrap CSS framework.
