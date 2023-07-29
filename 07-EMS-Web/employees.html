@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees | EMS Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <style>
+        .headshot {
+            aspect-ratio: 1 / 1;
+        }
+        .headshot img {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow small mb-3">
+        <div class="container-fluid">
+            <a href="dash.html" class="navbar-brand">
+                <img height="40" src="https://seeklogo.com/images/G/gitlab-logo-FAA48EFD02-seeklogo.com.png" alt="">
+            </a>
+            <button
+                class="navbar-toggler border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-content"
+                aria-controls="#navbar-content"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="employees.html">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">Jobs</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="hstack gap-3">
+                        <input type="search" class="form-control form-control-sm me-auto" placeholder="Search" aria-label="Search for...">
+                        <button type="submit" class="btn btn-sm btn-light"><i class="bi bi-search"></i></button>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-primary ms-3"><i class="bi bi-box-arrow-right"></i></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Employees -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <div class="list-group shadow-sm small mb-3">
+                    <div class="list-group-item active">Employee Data</div>
+                    <a
+                    href="#" 
+                    class="list-group-item list-group-item-action"
+                    data-bs-toggle="modal"
+                    data-bs-target="#add-employee"
+                    >Add employee</a>
+                    <a href="employees.html" class="list-group-item list-group-item-action">View employees</a>
+                </div>
+                <div class="list-group shadow-sm small mb-3">
+                    <div class="list-group-item active">Related Links</div>
+                    <a href="#" class="list-group-item list-group-item-action">Jobs list</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0 mb-3">
+                    <div class="card-header text-bg-dark text-center">
+                        Employees List
+                    </div>
+                    <table class="table table-sm small table-bordered align-middle mb-0">
+                        <tr>
+                            <th>ID</th>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Email ID</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>g107637</td>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@gitlab.com</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>g107637</td>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@gitlab.com</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>g107637</td>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@gitlab.com</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>g107637</td>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@gitlab.com</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>g107637</td>
+                            <td>Jane Doe</td>
+                            <td>jane.doe@gitlab.com</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#employee_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add employee modal -->
+    <div
+        class="modal fade" 
+        id="add-employee" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Add employee details</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        arai-label="close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <form class="container">
+                        <div class="row gx-3">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="date" class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Email ID" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Phone" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <select class="form-select form-select-sm" aria-label="Job Assigned">
+                                        <option selected>Select job for Employee</option>
+                                        <option value="Graphic Designer">Graphic Designer</option>
+                                        <option value="Web Developer">Web Developer</option>
+                                        <option value="Digital Marketer">Digital Marketer</option>
+                                        <option value="Sales Representative">Sales Representative</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-sm btn-primary">Add Employee</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-grid">
+                                    <button
+                                        type="submit" 
+                                        class="btn btn-sm btn-light"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    >Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee details modal -->
+    <div
+        class="modal fade" 
+        id="employee_detail" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Employee details</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        arai-label="close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-5 mx-auto mb-3">
+                            <div class="headshot rounded-circle overflow-hidden position-relative">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="https://media.istockphoto.com/id/1089633230/photo/glasses-girl-in-white.jpg?s=612x612&w=0&k=20&c=qtq-7I75UA_ViQdi0GWbaGnLUYjHIRBJE3ry1v5T-TA=" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-bordered small mb-0">
+                        <tr>
+                            <th class="w-50">ID</th>
+                            <td>107</td>
+                        </tr>
+                        <tr>
+                            <th>Employee ID</th>
+                            <td>g107637</td>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <td>Jane</td>
+                        </tr>
+                        <tr>
+                            <th>Last Name</th>
+                            <td>Doe</td>
+                        </tr>
+                        <tr>
+                            <th>Email ID</th>
+                            <td>jane.doe@gitlab.com</td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td>801-867-5309</td>
+                        </tr>
+                        <tr>
+                            <th>Hire Date</th>
+                            <td>July 28 2023</td>
+                        </tr>
+                        <tr>
+                            <th>Position</th>
+                            <td>Graphic Designer</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a 
+                        href="#"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#employee_edit"
+                    >Edit Details</a>
+                    <a 
+                    href="#"
+                    class="btn btn-sm btn-light"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit employee modal -->
+    <div
+        class="modal fade" 
+        id="employee_edit" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Edit employee details</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        arai-label="close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <form class="container">
+                        <div class="row gx-3">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="date" class="form-control form-control-sm" value="2023-07-28" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="First Name" value="Jane" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Last Name" value="Doe" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Email ID" value="jane.doe@gitlab.com" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Phone" value="801-8675309" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <select class="form-select form-select-sm" aria-label="Job Assigned">
+                                        <option disabled>Select job for Employee</option>
+                                        <option value="Graphic Designer" selected>Graphic Designer</option>
+                                        <option value="Web Developer">Web Developer</option>
+                                        <option value="Digital Marketer">Digital Marketer</option>
+                                        <option value="Sales Representative">Sales Representative</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-grid">
+                                    <button
+                                        type="submit" 
+                                        class="btn btn-sm btn-light"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    >Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    
+    <!-- Employee details modal -->
+    <div
+        class="modal fade" 
+        id="employee_delete" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center d-flex justify-content-between align-items-center">
+                    <h4 class="fw-light m-0">
+                        Do you want to delete <strong>Jane Doe</strong>?
+                    </h4>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button 
+                        type="submit"
+                        href="#"
+                        class="btn btn-sm btn-primary"
+                    >Delete</button>
+                    <button 
+                        type="button"
+                        href="#"
+                        class="btn btn-sm btn-light"
+                    >Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
