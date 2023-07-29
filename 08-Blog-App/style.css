@@ -1,0 +1,6 @@
+.banner-holder, .main-page-header {
+    background-image: url(https://media.istockphoto.com/id/1337801722/photo/black-kitchen-design-with-counter-and-empty-wall.jpg?s=612x612&w=0&k=20&c=NWgFOSM1fNN_7thOEqgCfY58qmSuMm8r9kbksOsOA_M=);
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+}
