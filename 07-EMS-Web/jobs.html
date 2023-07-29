@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | EMS Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <style>
+        .circle-icon {
+            aspect-ratio: 1 / 1;
+        }
+        .circle-icon img {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark shadow small mb-3">
+        <div class="container-fluid">
+            <a href="dashboard.html" class="navbar-brand">
+                <img height="40" src="https://seeklogo.com/images/G/gitlab-logo-FAA48EFD02-seeklogo.com.png" alt="">
+            </a>
+            <button
+                class="navbar-toggler border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-content"
+                aria-controls="#navbar-content"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="employees.html">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">Jobs</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="hstack gap-3">
+                        <input type="search" class="form-control form-control-sm me-auto" placeholder="Search" aria-label="Search for...">
+                        <button type="submit" class="btn btn-sm btn-light"><i class="bi bi-search"></i></button>
+                    </div>
+                    <a href="index.html" class="btn btn-sm btn-primary ms-3"><i class="bi bi-box-arrow-right"></i></a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jobs -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <div class="list-group shadow-sm small mb-3">
+                    <div class="list-group-item active">Job Data</div>
+                    <a
+                    href="#" 
+                    class="list-group-item list-group-item-action"
+                    data-bs-toggle="modal"
+                    data-bs-target="#add-job"
+                    >Add job</a>
+                    <a href="jobs.html" class="list-group-item list-group-item-action">View jobs</a>
+                </div>
+                <div class="list-group shadow-sm small mb-3">
+                    <div class="list-group-item active">Related Links</div>
+                    <a href="employees.html" class="list-group-item list-group-item-action">Employees list</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0 mb-3">
+                    <div class="card-header text-bg-dark text-center">
+                        Jobs List
+                    </div>
+                    <table class="table table-sm small table-bordered align-middle mb-0">
+                        <tr>
+                            <th>ID</th>
+                            <th>Job Name</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>Graphic Designer</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>Graphic Designer</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>107</td>
+                            <td>Graphic Designer</td>
+                            <td>
+                                <div class="d-flex flex-row justify-content-evenly">
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_detail"
+                                    ><i class="bi bi-info-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_edit"
+                                    ><i class="bi bi-pencil-square"></i></a>
+                                    <a
+                                        href="#" 
+                                        class="link-secondary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#job_delete"
+                                    ><i class="bi bi-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add jobs modal -->
+    <div
+        class="modal fade" 
+        id="add-job" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Add job details</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        arai-label="close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <form class="container">
+                        <div class="row gx-3">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="date" class="form-control form-control-sm" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Job Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <textarea class="form-control form-control-sm" placeholder="Job Description" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-sm btn-primary">Add Job</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-grid">
+                                    <button
+                                        type="submit" 
+                                        class="btn btn-sm btn-light"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    >Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job details modal -->
+    <div
+        class="modal fade" 
+        id="job_detail" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Job details</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        arai-label="close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-5 mx-auto mb-3">
+                            <div class="circle-icon rounded-circle overflow-hidden position-relative">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="https://media.istockphoto.com/id/1057613484/photo/image-of-female-creative-graphic-designer-working-on-color-selection-and-drawing-on-graphics.jpg?s=612x612&w=0&k=20&c=41BDxVlnF8m55ZrL-xuTdhkub6xuoTrZlGJtExV3cjE=" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-bordered small mb-0">
+                        <tr>
+                            <th class="w-50">ID</th>
+                            <td>107</td>
+                        </tr>
+                        <tr>
+                            <th>Job Name</th>
+                            <td>Graphic Designer</td>
+                        </tr>
+                        <tr>
+                            <th>Job Description</th>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, iusto id dolorem atque magni nam.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a 
+                        href="#"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#job_edit"
+                    >Edit Details</a>
+                    <a 
+                    href="#"
+                    class="btn btn-sm btn-light"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit job modal -->
+    <div
+        class="modal fade" 
+        id="job_edit" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title">Edit job details</h5>
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        arai-label="close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <form class="container">
+                        <div class="row gx-3">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="date" class="form-control form-control-sm" value="2023-07-28" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Job Name" value="Graphic Designer" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <textarea class="form-control form-control-sm" placeholder="Job Description" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, iusto id dolorem atque magni nam.</textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-sm btn-primary">Add Job</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="d-grid">
+                                    <button
+                                        type="submit" 
+                                        class="btn btn-sm btn-light"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    >Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div
+        class="modal fade" 
+        id="job_delete" 
+        data-bs-backdrop="static" 
+        tabindex="-1" 
+        aria-hidden="true"
+        style="backdrop-filter: blur(5px);"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center d-flex justify-content-between align-items-center">
+                    <h4 class="fw-light m-0">
+                        Do you want to delete <strong>Graphic Designer</strong>?
+                    </h4>
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button 
+                        type="submit"
+                        href="#"
+                        class="btn btn-sm btn-primary"
+                        data-bs-dismiss="modal"
+                    >Delete</button>
+                    <button 
+                        type="button"
+                        href="#"
+                        class="btn btn-sm btn-light"
+                        data-bs-dismiss="modal"
+                    >Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
